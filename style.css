@@ -1,0 +1,52 @@
+:root{
+  --bg:#f7f3ef;
+  --card:#ffffff;
+  --muted:#6b6b6b;
+  --accent:#b4633a;
+  --accent-dark:#8f3f26;
+  --container:1100px;
+  --radius:12px;
+  --shadow:0 6px 18px rgba(20,20,20,0.08);
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#222; margin:0; line-height:1.45}
+.container{max-width:var(--container); margin:0 auto; padding:1.25rem}
+.header-inner{display:flex; align-items:center; justify-content:space-between}
+.site-header{background:linear-gradient(90deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01)); padding:0.5rem 0}
+.brand{font-weight:700; letter-spacing:0.6px; color:#111; text-decoration:none}
+.nav a{margin-left:1rem; color:inherit; text-decoration:none}
+
+.hero{padding:4rem 0; background-image:linear-gradient(180deg, rgba(180,99,58,0.03), transparent); border-bottom:1px solid rgba(0,0,0,0.03)}
+.hero h1{font-size:2.25rem; margin:0 0 .5rem}
+.hero p{margin:.25rem 0}
+.btn{display:inline-block; background:var(--accent); color:#fff; padding:.6rem .9rem; border-radius:10px; text-decoration:none}
+.btn.small{padding:.35rem .6rem; font-size:.9rem}
+
+.features{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:2rem}
+.feature{background:var(--card); padding:1rem; border-radius:10px; box-shadow:var(--shadow)}
+
+.card-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:1rem}
+.card{background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow)}
+.card img{width:100%; height:160px; object-fit:cover; display:block}
+.card-body{padding:0.9rem}
+.card h4{margin:.25rem 0}
+.card p{margin:0.25rem 0 .6rem; color:var(--muted)}
+.card-actions{display:flex; gap:.5rem}
+
+.inventory-top{display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:1.25rem}
+.inventory-controls{display:flex; gap:.5rem}
+.inventory-controls input, .inventory-controls select{padding:.5rem; border-radius:8px; border:1px solid rgba(0,0,0,0.08)}
+.muted{color:var(--muted)}
+
+.contact{margin:2rem 0}
+.site-footer{padding:1rem 0; text-align:center; color:var(--muted); margin-top:2rem}
+
+@media (max-width:720px){
+  .hero h1{font-size:1.6rem}
+  .header-inner{flex-direction:row}
+  .nav{display:none}
+}
+
+.small{font-size:.85rem}
+.car-card .card-img{height:150px}
